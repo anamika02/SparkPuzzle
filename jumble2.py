@@ -72,10 +72,3 @@ for j in data2:
     k=k+1
     
 print('final_sentence=',final_sentence)
-    
-    
-    
-        
-    
-#    print(jumbledword, legal_words)
-    
