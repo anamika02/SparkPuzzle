@@ -2,11 +2,6 @@ import argparse
 from itertools import permutations
 import json
 
-#parser = argparse.ArgumentParser(description='Solver for Jumble')
-#parser.add_argument('jumbledwords', nargs='+',
-#                    help='One or more jumbled words')
-#argv = parser.parse_args()
-
 input_file = open('/Users/anamikas/Project/sparkdemo/SparkExcercise/puzzle2.json')
 input_data = json.load(input_file)
 data1 = input_data['jumble']
@@ -88,5 +83,3 @@ print('final_sentence=',final_sentence)
 #    print('Legal Words',legal_words)
 #    chosen_word = word_selection(legal_words)
 #    print('ChosenWord=',chosen_word) 
-
-    
