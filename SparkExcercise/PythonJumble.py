@@ -2,7 +2,7 @@ import argparse
 from itertools import permutations
 import json
 
-input_file = open('/Users/anamikas/Project/sparkdemo/SparkExcercise/puzzle2.json')
+input_file = open('/Users/anamikas/Project/sparkdemo/SparkExcercise/PythonInput/puzzle1.json')
 input_data = json.load(input_file)
 data1 = input_data['jumble']
 data2 = list(input_data['finalspace'])
@@ -12,7 +12,7 @@ f = open('/Users/anamikas/Project/sparkdemo/SparkExcercise/freq_dict.json')
 data = json.load(f)
 words=set(data.keys())
 #print(words)
-#print(data)
+print(data)
 f.close()
 
 
@@ -64,22 +64,29 @@ for (jumbledword, charPositions) in data1.items():
 #        print('final_sentence=',final_sentence)
 
 print('final_sentence=',final_sentence)
-     
-#k=0
-#for j in data2:
-#    final_sentence = insert_space(final_sentence, j+k)
-#    k=k+1
-#    
+
+
+###############Comment this section for performance###################
+
+#perm = set([''.join(p) for p in permutations(final_sentence)])
+##print('',perm)
+#print('Permutations=',len(perm))
 #
+#for each_permin in perm:
+#    final_list = []
+#    prev_pos=0
+#    test_list=[]
+#    for j in data2:
+##        print(each_permin[prev_pos:j])
+#        if(each_permin[prev_pos:j] in words):
+#            test_list.append(each_permin[prev_pos:j])
+#        else:
+#            del test_list[:]
+#            break;
+#        prev_pos=j
+#    if len(test_list)>0:
+#        final_list.append(test_list)
+#        print(test_list)
 #
-#final_words = final_sentence.split()
-## for each word in the line:
-#for word in final_words:
-#    print('word',word)
-#    perm = set([''.join(p) for p in permutations(word)])
-##   print(perms)
-#    print(len(perm))
-#    legal_words = perm & words
-#    print('Legal Words',legal_words)
-#    chosen_word = word_selection(legal_words)
-#    print('ChosenWord=',chosen_word) 
+#print(final_list)
+#        
