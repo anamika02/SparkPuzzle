@@ -28,8 +28,3 @@ freq_dict - keys are English Dictionary words to be used in your solving of the
  values mean that the word is too infrequent to be ranked.
 pictures of the jumbles we provided for you to solve. You can put these in 
 whatever data format you'd like for your program to read in
-
-Please send us a link to your github repository with the following:
-Your initial data (from the jumble pictures given)
-Your code
-Output from your code
